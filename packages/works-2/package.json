@@ -25,6 +25,6 @@
     "build:clean": "rimraf -rf ./dist",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build": "yarn build:clean && yarn build:esm",
-    "attw": "attw . --entrypoints . --ignore-rules cjs-resolves-to-esm --pack"
+    "attw": "yarn build && attw . --entrypoints . --ignore-rules cjs-resolves-to-esm --pack"
   }
 }
