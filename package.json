@@ -1,0 +1,16 @@
+{
+  "name": "ts-issue",
+  "license": "MIT",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "@arethetypeswrong/cli": "^0.12.1",
+    "typescript": "^5.2.2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "works-2",
+  "version": "2.0.1-alpha.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build:clean": "rimraf -rf ./dist",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build": "yarn build:clean && yarn build:esm",
+    "attw": "attw . --entrypoints . --ignore-rules cjs-resolves-to-esm --pack"
+  }
+}
